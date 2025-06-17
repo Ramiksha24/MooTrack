@@ -5,5 +5,5 @@ functions-framework
 streamlit
 joblib
 folium
-streamlit_folium
+streamlit-folium
 pandas
