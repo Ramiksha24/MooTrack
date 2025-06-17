@@ -1,0 +1,7 @@
+pymongo
+geopy
+twilio
+functions-framework
+streamlit
+joblib
+folium
