@@ -1,4 +1,5 @@
 import streamlit as st
+st.set_page_config(layout="wide")
 from streamlit_folium import st_folium
 import folium
 import pymongo
@@ -51,7 +52,7 @@ def predict_risk(dist_forest, dist_leopard, time_of_day):
 # -----------------------
 # Streamlit UI
 # -----------------------
-st.set_page_config
+
 st.title("🐄 MooTrack Dashboard")
 st.markdown("Real-time Cow Tracking + AI Leopard Risk Prediction")
 
