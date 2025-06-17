@@ -8,13 +8,16 @@ from geopy.distance import geodesic
 import joblib
 import numpy as np
 from datetime import datetime
+import os
 
 # -----------------------
 # Load ML Model + Encoder
 # -----------------------
 try:
-    model = joblib.load("D:/mootrack/risk_predictor_model.pkl")
-    encoder = joblib.load("D:/mootrack/time_of_day_encoder.pkl")
+    model_path = os.path.join(os.path.dirname(__file__), "risk_predictor_model.pkl")
+    encoder_path = os.path.join(os.path.dirname(__file__), "time_of_day_encoder.pkl")
+    model = joblib.load(model_path)
+    encoder = joblib.load(encoder_path)
     model_loaded = True
 except:
     st.error("🚫 ML model or encoder not found. Please train the model first.")
